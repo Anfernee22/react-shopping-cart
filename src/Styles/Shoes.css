@@ -1,0 +1,23 @@
+.shoes-items{
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff1e1;
+}
+.shoes-items img{
+    width: 80%;
+    height: 70%;
+    padding-block: .5em;
+   align-self: center;
+}
+.shoes-info{
+    height: 16.5vh;
+    display: flex;
+    flex-direction: column;
+   justify-content: center;
+   padding-left: 2em;
+   gap: 1em;
+   background-color: #1d3c45;
+   color: #fff1e1;
+   border: 1px solid #d2601a;
+}
