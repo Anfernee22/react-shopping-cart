@@ -1,32 +1,44 @@
-// import ShoppingItems from './ShoppingItems.json'
 import '../Styles/Shoes.css'
-const Shoes = ({img, price, id, items, description, color, gender, shoesSize, setShoesSize, storedShoes, setStoredShoes}) => {
-  const shoesHandler = (e) => {
-    // setStoredShoes(storedShoes.filter(el => {
-    //     if(el.id === id){
-    //         const container = document.querySelector('.items')
-    //        const div = document.createElement('div');
-    //        div.classList = 'pop-up-items';
-    //        div.innerHTML = `
-    //        <img src=${el.image}></img>
-    //        <p>Price : ${el.price}</p>`;
-    //        container.appendChild(div)
-    //        console.log(div)
-    //     }
-    //     return storedShoes;
-             
-    //     }))  
+import { useState } from 'react'
+const Shoes = ({img, price, id, shoesSizes, setShoesSize, description, color, gender, storedShoes, setStoredShoes}) => {
+const [counter, setCounter] = useState(0); 
+const plus = () => {
+  setCounter(counter+1)
+}
+const minus = () => {
+  if(counter < 1){
+    setCounter(0)
+  }else{
+    setCounter(counter - 1)
   }
-    
-    return(
-      <div className="shoes-items" key={id}>
-        <img src={img} alt={description} onClick={shoesHandler}/>
-        <div className="shoes-info">
-          <h3>{description}</h3>
-          <p>{gender} - {color}</p>
-          <p>Price : ${price}.00</p>
+}
+return(
+  <div className="shoes-items" key={id}>
+    <img src={img} alt={description}/>
+    <div className="shoes-info">
+      <h4>{description}</h4>
+      <p>{gender} - {color}</p>
+      <p>Price : ${price}.00</p>
+    </div>
+
+    <div className="shoes-details">
+      <div className="details-container">
+        <div className="quantity">
+          <h4>Quantity:</h4>
+          <button onClick={minus} > - </button>
+          <div className="counter" onChange={() => setCounter(counter)}>{counter}</div>
+          <button onClick={plus}> + </button>
         </div>
-      </div>  
-    )
+        
+        <div className="shoes-size">
+          {shoesSizes.map(size => (
+            <button className="size-btn" key={size.id} value={size.size}>{size.size}</button>
+          ))}
+        </div>
+        <button className="add-btn">Add To Cart</button>
+      </div>
+    </div>
+  </div>  
+  )
 }
 export default Shoes;

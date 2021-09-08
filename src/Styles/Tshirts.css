@@ -1,5 +1,6 @@
 .shirts-items{
-    width: 20%;
+    width: 19.6%;
+    height: 41.7vh;
     display: flex;
     flex-direction: column;
     background-color: #fff1e1;
@@ -21,4 +22,79 @@
    background-color: #1d3c45;
    color: #fff1e1;
 }
-
+.shirts-details {
+	display: none;
+}
+.details {
+	width: 14.75%;
+	height: 41.7vh;
+	position: absolute;
+	top: 6.25em;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	background-color: rgba(0, 0, 0, 0.719);
+	gap: 1.5em;
+}
+.shirts-items:hover .shirts-details {
+	display: block;
+}
+.quantity-container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	align-self: center;
+	width: 80%;
+}
+.quantity-container h4{
+	padding: .3em .5em;
+	color: #fff1e1;
+}
+.quantity-container button {
+	padding: 0.4em 0.5em;
+	background-color: #1d3c45;
+	color: #fff1e1;
+	border: none;
+	font-size: 1em;
+	height: 100%;
+	padding-inline: .6em;
+}
+.shirts-counter {
+	color: #fff1e1;
+	background-color: #d2601a;
+	height: 100%;
+	display: grid;
+	place-content: center;
+	width: 100%;
+}
+.shirts-size {
+	display: flex;
+	justify-content: center;
+	gap: 0.3em;
+}
+.shirt-btn {
+	background-color: #d2601a;
+	border: none;
+	padding: 0.5em;
+	color: #fff1e1;
+	font-weight: bold;
+	width: 20%;
+}
+.shirt-btn:focus{
+	background-color: #1d3c45;
+	color:#d2601a;
+}
+.add-shirt {
+	padding-block: 0.5em;
+	background-color: #d2601a;
+	border: 1px solid #d2601a;
+	color: #fff1e1;
+	width: 46%;
+	align-self: center;
+	border-radius: 1em;
+}
+.add-shirt:hover{
+	background-color: #1d3c45;
+	color: #fff1e1;
+	font-weight: bold;
+}

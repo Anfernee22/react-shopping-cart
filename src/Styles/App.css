@@ -27,9 +27,23 @@
     align-items: center;
     background-color: #d2601a;
 }
-.shirts-header h1, .shoes-header h1{
-    padding: .3em 1em;
+.shirts-header h1{
+    padding: .3em .9em;
+    background-color:#1d3c45;
+    color: #d2601a;
+    font-size: 1.7em;
+}
+.shoes-header h1{
+    padding: .2em .9em;
     background-color:#1d3c45;
     color: #d2601a;
 }
 
+.pop-up-items{
+    position: absolute;
+    top: 10em;
+    right: 20em;
+    border: 1px solid white;
+    background-color: white;
+    height: 100vh;
+}

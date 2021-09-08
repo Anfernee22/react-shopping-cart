@@ -1,23 +1,101 @@
-.shoes-items{
-    width: 20%;
-    display: flex;
-    flex-direction: column;
-    background-color: #fff1e1;
+.shoes-items {
+	width: 19.6%;
+	display: flex;
+	flex-direction: column;
+	background-color: #fff1e1;
 }
-.shoes-items img{
-    width: 80%;
-    height: 70%;
-    padding-block: .5em;
-   align-self: center;
+
+.shoes-items img {
+	width: 80%;
+	height: 70%;
+	padding-block: 0.5em;
+	align-self: center;
 }
-.shoes-info{
-    height: 16.5vh;
-    display: flex;
-    flex-direction: column;
-   justify-content: center;
-   padding-left: 2em;
-   gap: 1em;
-   background-color: #1d3c45;
-   color: #fff1e1;
-   border: 1px solid #d2601a;
+.shoes-info {
+	height: 16.5vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding-left: 2em;
+	gap: 1em;
+	background-color: #1d3c45;
+	color: #fff1e1;
+	border: 1px solid #d2601a;
+}
+.shoes-details {
+	display: none;
+}
+.details-container {
+	width: 14.75%;
+	height: 40.7vh;
+	position: absolute;
+	top: 28.9em;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	background-color: rgba(0, 0, 0, 0.719);
+	gap: 1em;
+}
+.shoes-items:hover .shoes-details {
+	display: block;
+}
+.quantity {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	align-self: center;
+	width: 80%;
+}
+.quantity h4{
+	padding: .3em .5em;
+	color: #fff1e1;
+}
+.quantity button {
+	padding: 0.4em 0.5em;
+	background-color: #d2601a;
+	color: #fff1e1;
+	border: none;
+	font-size: 1em;
+	height: 100%;
+	padding-inline: .6em;
+}
+.counter {
+	color: #fff1e1;
+	background-color: #1d3c45;
+	height: 100%;
+	display: grid;
+	place-content: center;
+	width: 100%;
+}
+
+.shoes-size {
+	display: flex;
+	gap: 0.3em;
+	flex-wrap: wrap;
+}
+.size-btn {
+	background-color: #d2601a;
+	border: none;
+	padding: 0.5em;
+	color: #fff1e1;
+	font-weight: bold;
+	width: 23%;
+}
+.size-btn:focus{
+	background-color: #1d3c45;
+	color:#d2601a;
+}
+.add-btn {
+	padding-block: 0.5em;
+	background-color: #1d3c45;
+	border: 1px solid #d2601a;
+	color: #fff1e1;
+	width: 46%;
+	align-self: center;
+	border-radius: 1em;
+}
+.add-btn:hover{
+	background-color: #d2601a;
+	color: #1d3c45;
+	font-weight: bold;
 }
