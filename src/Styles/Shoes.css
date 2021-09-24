@@ -18,18 +18,17 @@
 	justify-content: center;
 	padding-left: 2em;
 	gap: 1em;
-	background-color: #1d3c45;
+	background-color: #1d3c45d3;
 	color: #fff1e1;
-	border: 1px solid #d2601a;
 }
 .shoes-details {
 	display: none;
 }
 .details-container {
 	width: 14.75%;
-	height: 40.7vh;
+	height: 41.8vh;
 	position: absolute;
-	top: 28.9em;
+	top: 30.3em;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -46,8 +45,8 @@
 	align-self: center;
 	width: 80%;
 }
-.quantity h4{
-	padding: .3em .5em;
+.quantity h4 {
+	padding: 0.3em 0.5em;
 	color: #fff1e1;
 }
 .quantity button {
@@ -57,7 +56,7 @@
 	border: none;
 	font-size: 1em;
 	height: 100%;
-	padding-inline: .6em;
+	padding-inline: 0.6em;
 }
 .counter {
 	color: #fff1e1;
@@ -73,17 +72,19 @@
 	gap: 0.3em;
 	flex-wrap: wrap;
 }
+
 .size-btn {
 	background-color: #d2601a;
 	border: none;
 	padding: 0.5em;
 	color: #fff1e1;
 	font-weight: bold;
-	width: 23%;
+	width: 20%;
+	text-align: center;
 }
-.size-btn:focus{
+.size-btn:focus {
 	background-color: #1d3c45;
-	color:#d2601a;
+	color: #d2601a;
 }
 .add-btn {
 	padding-block: 0.5em;
@@ -94,8 +95,17 @@
 	align-self: center;
 	border-radius: 1em;
 }
-.add-btn:hover{
+
+.add-btn:hover {
 	background-color: #d2601a;
 	color: #1d3c45;
 	font-weight: bold;
+}
+.empty {
+	width: 46%;
+	align-self: center;
+	padding-block: 0.5em;
+	background-color: rgba(109, 106, 106, 0.801);
+	border: none;
+	color: #fff1e1;
 }

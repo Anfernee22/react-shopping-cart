@@ -1,7 +1,8 @@
 import { useState } from 'react'
 import '../Styles/Tshirts.css'
-const Tshirts = ({img, price, id, description, color, gender, shirtSizes}) => {
-    const [shirtCounter, setShirtCounter] = useState(0)
+const Tshirts = ({img, price, id, description, color, gender, shirtSizes, cart, setCart}) => {
+    const [shirtCounter, setShirtCounter] = useState(0);
+    const [shirtSize, setShirtSize] = useState('')
     const plus = () => {
         setShirtCounter(shirtCounter+1)
       }
@@ -12,6 +13,15 @@ const Tshirts = ({img, price, id, description, color, gender, shirtSizes}) => {
           setShirtCounter(shirtCounter - 1)
         }
       }
+      const addShirt = () => {
+          if(shirtCounter === 0 || shirtSize === ''){
+            console.log('empty')
+          }else{
+            setShirtCounter(0)
+            setCart([...cart, {image: img, description: description, gender: gender, color: color, price: price, size: shirtSize, quantity: shirtCounter, id : Math.ceil(Math.random() * 1000 - (8*8)) }])
+          }
+      }
+      console.log(cart)
     return(
         <div className="shirts-items" key={id}>
             <img src={img} alt={description}/> 
@@ -32,10 +42,10 @@ const Tshirts = ({img, price, id, description, color, gender, shirtSizes}) => {
 
                     <div className="shirts-size">
                         {shirtSizes.map(el => (
-                            <button className="shirt-btn" key={el.id} value={el.size} >{el.size}</button>
+                            <button className="shirt-btn" key={el.id} onClick={() => setShirtSize(el.size)}>{el.size}</button>
                         ))}
                     </div>
-                    <button className="add-shirt">Add To Cart</button>
+                    <button className={shirtCounter < 1 ? 'disable' : 'add-shirt'} onClick={addShirt}>Add To Cart</button>
                 </div>
             </div>
         </div>    

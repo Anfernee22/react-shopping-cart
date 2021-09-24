@@ -1,11 +1,23 @@
-import '../Styles/Header.css'
+import '../Styles/Header.css';
+import { Link } from 'react-router-dom';
 
-const Header = () => {
+const Header = ({cart}) => {
     return(
-       <div className="main-header">
-           <i className="fas fa-tint"></i>
-           <h1 className="animate__animated animate__bounce">Drip Store</h1>
-           <i className="fas fa-tint"></i>
+        <div className="main-header">
+            <div className="header">
+                <i className="fas fa-tint"></i>
+                <h1 className="animate__animated animate__bounce">Drip Store</h1>
+                <i className="fas fa-tint"></i>
+            </div>
+                <div className="nav-links" >
+                    <div className="products-container" >
+                        <Link to="/" className='link'>Products</Link>
+                </div>
+                <div className="shopping-cart">
+                    <Link to="/cart" className="cart-icon"><i className="fas fa-shopping-cart "></i></Link>
+                    <div className={cart.length < 1 ? 'cart-quantity-unactive' : 'cart-quantity'}>{cart.length}</div>
+                </div>
+           </div>
        </div>
     )
 }
