@@ -1,39 +1,43 @@
 .shoes-items {
-	width: 19.6%;
-	display: flex;
-	flex-direction: column;
-	background-color: #fff1e1;
-}
-
-.shoes-items img {
-	width: 80%;
-	height: 70%;
-	padding-block: 0.5em;
-	align-self: center;
-}
-.shoes-info {
-	height: 16.5vh;
+	width: 20%;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	padding-left: 2em;
-	gap: 1em;
+	background-color: #fff1e1;
+}
+.shoes-items img {
+	width: 75%;
+	height: 55%;
+	padding-block: 0.5rem;
+	align-self: center;
+}
+.shoes-info {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 1rem;
 	background-color: #1d3c45d3;
 	color: #fff1e1;
+	height: 45%;
+}
+.shoes-info h4{
+	color: #d2601a;
 }
 .shoes-details {
 	display: none;
 }
 .details-container {
-	width: 14.75%;
-	height: 41.8vh;
+	border: 1px solid #d2601a;
+	width: 14.6%;
+	height: 41.5vh;
 	position: absolute;
-	top: 30.3em;
+	top: 62.7%;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	background-color: rgba(0, 0, 0, 0.719);
-	gap: 1em;
+	gap: 1rem;
 }
 .shoes-items:hover .shoes-details {
 	display: block;
@@ -41,45 +45,43 @@
 .quantity {
 	display: flex;
 	align-items: center;
-	justify-content: center;
+	justify-content: space-evenly;
 	align-self: center;
-	width: 80%;
 }
 .quantity h4 {
-	padding: 0.3em 0.5em;
+	padding: 0.3rem 0.5rem;
 	color: #fff1e1;
 }
 .quantity button {
-	padding: 0.4em 0.5em;
 	background-color: #d2601a;
 	color: #fff1e1;
 	border: none;
-	font-size: 1em;
-	height: 100%;
-	padding-inline: 0.6em;
+	font-size: 1rem;
+	height: 70%;
+	padding-inline: .7rem;
 }
 .counter {
 	color: #fff1e1;
 	background-color: #1d3c45;
-	height: 100%;
+	height: 70%;
 	display: grid;
 	place-content: center;
+	padding-inline: .7rem;
 	width: 100%;
 }
-
 .shoes-size {
 	display: flex;
-	gap: 0.3em;
+	padding-inline: .5rem;
+	gap: 0.3rem;
 	flex-wrap: wrap;
 }
-
 .size-btn {
 	background-color: #d2601a;
 	border: none;
-	padding: 0.5em;
+	padding: 0.5rem;
 	color: #fff1e1;
 	font-weight: bold;
-	width: 20%;
+	width: 22%;
 	text-align: center;
 }
 .size-btn:focus {
@@ -87,25 +89,127 @@
 	color: #d2601a;
 }
 .add-btn {
-	padding-block: 0.5em;
+	padding-block: 0.5rem;
 	background-color: #1d3c45;
 	border: 1px solid #d2601a;
 	color: #fff1e1;
-	width: 46%;
+	width: 56%;
 	align-self: center;
-	border-radius: 1em;
+	border-radius: 1rem;
 }
-
 .add-btn:hover {
 	background-color: #d2601a;
 	color: #1d3c45;
 	font-weight: bold;
 }
 .empty {
-	width: 46%;
+	width: 56%;
 	align-self: center;
-	padding-block: 0.5em;
-	background-color: rgba(109, 106, 106, 0.801);
+	padding-block: 0.5rem;
 	border: none;
-	color: #fff1e1;
+	border-radius: 10px;
+	opacity: .5;
+	color: #d2601a;
+}
+.remove{
+	display: none;
+}
+@media (max-width: 768px){
+	.shoes-items {
+		width: 48%;
+		height: 39vh;
+	}
+	.shoes-items img {
+		width: 55%;
+		height: 40%;
+	}
+	.shoes-info {
+		height: 20%;
+		font-size: 1.1rem;
+		gap: .3rem;
+		background-color: #fff1e1;
+		padding-block: .4rem;
+	}
+	.shoes-info p{
+		color: #1d3c45;
+	}
+	.shoes-items:not():hover .shoes-details {
+		display: none;
+	}
+	.shoes-details{
+		display: block;
+		height: 60%;
+	}
+	.details-container {
+		width: 100%;
+		height: 100%;
+		display: flex;
+		position: inherit;
+		gap: .5rem;
+	}
+	.counter{
+		height: 100%;
+	}
+	.quantity {
+		width: 70%;
+	}
+	.quantity button {
+		width: 20%;
+		height: 100%;
+	}
+	.shoes-size {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+	}
+	.size-btn {
+		padding: .5rem 0;
+		width: 100%;
+	}
+	.add-btn{
+		width: 36%;
+	}
+	.empty {
+		width: 36%;
+	}
+}
+@media screen and (max-width: 543px){
+	.shoes-items {
+		width: 90%;
+		height: 45vh;
+	}
+	.shoes-info {
+		font-size: .8rem;
+		gap: 0;
+		padding-block: .5rem;
+	}
+	.details-container {
+		padding-block: .5rem;
+	}
+	.counter{
+		width: 20%;
+	}
+	.quantity {
+		justify-content: center;
+		font-size: .7rem;
+	}
+	.quantity button {
+		width: 15%;
+		font-size: 1rem;
+		padding: 0;
+	}
+	.shoes-size {
+		padding: .2rem;
+		height: 40%;
+	}
+	.size-btn {
+		padding: 0;
+		height: 100%;
+		font-size: .7rem;
+	}
+	.add-btn{
+		font-size: .7rem;
+	}
+	.empty {
+		font-size: .7rem;
+	}
 }

@@ -1,0 +1,12 @@
+.message-container{
+    display: grid;
+    place-content: center;
+    gap: .3rem;
+    height: 7vh;
+    background-color: #fff1e1c2;
+}
+@media (max-width: 768px){
+    .message-container{
+        display: none;
+    }
+}
